@@ -1,0 +1,13 @@
+<div class="">
+ <form (ngSubmit)="addEmployee()" #employeeForm="ngForm">
+		<input type="text" placeholder="Name" [(ngModel)]="person.name" name="name" #name="ngModel"/> <br/>
+		<br/>
+		<input type="text" placeholder="Depar" [(ngModel)]="person.department" name="department" #department="ngModel"/><br/>
+		<br/>
+		<input type="text" placeholder="age" [(ngModel)]="person.age" name="age" #age="ngModel"/><br/>
+		<br/>
+		<button type="submit">Add Employee</button>
+ </form>
+ <app-view-employee (updateEmp)="updateEmployee($event)"></app-view-employee>
+</div>
+

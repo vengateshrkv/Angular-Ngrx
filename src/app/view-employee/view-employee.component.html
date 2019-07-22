@@ -1,0 +1,26 @@
+
+<div>
+    <h2>Employee List </h2>
+    <table border=1>
+        <thead>
+            <tr>
+                <th>Emp No</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Age</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employeeList, let i = index">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.department}}</td>
+                <td>{{employee.age}}</td>
+                <td (click)="updateEmployee(employee)">##</td>
+                <td (click)="delEmployee(i)">X</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
