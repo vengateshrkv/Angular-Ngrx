@@ -15,13 +15,15 @@ import { StoreDevtoolsModule } from  '@ngrx/store-devtools'
 
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component'
+import { ReverseStr } from './Filters/pipe';
 import { EmployeeService } from './app.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    ReverseStr
   ],
   imports: [
     BrowserModule,
